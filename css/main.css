@@ -1,0 +1,101 @@
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --para-color: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--light-gray);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 767px){
+	.container{
+        height: 100%;
+	}
+    .card {
+        margin: 10px;
+    }
+}
+.container {
+    max-width: 900px;
+}
+.card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    border-radius: 10px;
+	overflow: hidden;
+}
+.card .box:first-child {
+    background-color: var(--Bright-orange);
+    padding: 45px;
+}
+.card .box:nth-child(2) {
+    background-color: var(--Dark-cyan);
+    padding: 45px;
+}
+.card .box:nth-child(3) {
+    background-color: var(--Very-dark-cyan);
+    padding: 45px;
+}
+.box h1 {
+    color: var(--light-gray);
+    padding: 20px 0;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-family: 'Big Shoulders Display';
+    font-weight: 700;
+}
+.box p {
+    color: var(--para-color);
+    line-height: 1.9;
+    margin: 20px 0;
+    font-size: 15px;
+}
+.box button {
+    width: 130px;
+    border: none;
+    padding: 15px;
+    border-radius: 40px;
+    background-color: var(--light-gray);
+    font-weight: 700;
+    margin: 20px 0;
+    transition: .5s;
+}
+.box:first-child  button {
+    color: var(--Bright-orange);
+}
+.box:nth-child(2) button {
+    color: var(--Dark-cyan);
+}
+.box:nth-child(3) button {
+    color: var(--Very-dark-cyan);
+}
+.box:first-child button:hover {
+    color: var(--light-gray);
+    border: 1px solid var(--light-gray);
+    background-color: var(--Bright-orange);
+    cursor: pointer;
+}
+.box:nth-child(2) button:hover {
+    color: var(--light-gray);
+    border: 1px solid var(--light-gray);
+    background-color: var(--Dark-cyan);
+    cursor: pointer;
+}
+.box:nth-child(3) button:hover {
+    color: var(--light-gray);
+    border: 1px solid var(--light-gray);
+    background-color: var(--Very-dark-cyan);
+    cursor: pointer;
+}
